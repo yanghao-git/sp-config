@@ -32,8 +32,4 @@ management:
 
 
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh
+

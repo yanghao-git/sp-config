@@ -21,7 +21,9 @@ eureka:
     service-url:
       #使用自己地址 (没有云服务地址必须加这个)
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
-
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
 #默认配置
 zuul:
   #开启重试, zuul默认不推荐使用重试, 要测试的话要手动开启
